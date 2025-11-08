@@ -1,0 +1,12 @@
+# Core Dependencies
+python-dotenv>=1.0.0
+sqlalchemy>=2.0.0
+psycopg2-binary>=2.9.0
+boto3>=1.28.0
+openai>=1.0.0
+tiktoken>=0.5.0
+
+# Optional/Development Dependencies
+# python-multipart>=0.0.6  # If needed for file uploads in future
+# pandas>=2.0.0           # If needed for data analysis in future
+# numpy>=1.24.0           # If needed for numerical operations
