@@ -1,6 +1,3 @@
-#!/usr/bin/env python3  # Allow direct execution on Unix-like systems
-# -*- coding: utf-8 -*-  # Source file uses UTF-8 encoding
-
 # 1) Ensure/create the scores table (with TEXT mat_sco_og_pc_script)
 #    python realtime_oi_pc_script_match.py reset_db
 #
@@ -574,7 +571,7 @@ async def watch_polling(interval_seconds: int = 30, model: str = GPT_MODEL):
         await asyncio.sleep(interval_seconds)             # Sleep until next poll
 
 # ================== Listen/Notify Mode (event-driven) ===========
-# -- SQL you must run once on your Postgres (RDS) to enable NOTIFY:
+# -- SQL we must run once on our Postgres (RDS) to enable NOTIFY:
 #
 # CREATE OR REPLACE FUNCTION public.notify_pc_recordings_pending()
 # RETURNS trigger
@@ -757,3 +754,4 @@ if __name__ == "__main__":                                                   # D
     except Exception as e:
         print(f" FATAL: {e}")                                                # Log error
         raise SystemExit(1)                                                  # Exit non-zero
+
