@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 # s3_download_audio.py
 # A small utility to list and download audio files from S3 (batch or single-file).
 # Each line below is commented to explain what it does.
@@ -135,7 +133,7 @@ def download_s3_object_to_file(s3_client, bucket: str, key: str, local_path: str
         try:
             if os.path.exists(local_path):
                 os.remove(local_path)
-                print(f"🧹 Cleaned up partial file: {local_path}")
+                print(f"Cleaned up partial file: {local_path}")
         except Exception:
             pass
         # Re-raise so the caller can decide what to log and how to proceed
@@ -346,4 +344,5 @@ if __name__ == "__main__":
         sys.exit(1)
     except Exception as e:
         print(f"\n Unexpected error: {e}")
+
         sys.exit(1)
