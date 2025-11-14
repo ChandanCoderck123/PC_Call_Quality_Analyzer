@@ -1,6 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-
 """
 pc_script3_ingest.py
 --------------------
@@ -693,3 +690,4 @@ if __name__ == "__main__":
     except Exception as unexpected_error:
         print(f" Unexpected error in main execution: {unexpected_error}")
         raise SystemExit(1)
+
