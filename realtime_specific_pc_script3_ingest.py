@@ -84,7 +84,7 @@ ALLOWED_EXTS: List[str] = [
 CUTOFF_TZ = ZoneInfo("Asia/Kolkata")
 # NOTE: your last message had 07/11/2025; earlier it was 06/11/2025.
 # Adjust the date you want to enforce here (IST strict > CUTOFF_LOCAL_DATE).
-CUTOFF_LOCAL_DATE = date(2025, 11, 6)  # set to 6 Nov 2025; change to 7 if needed
+CUTOFF_LOCAL_DATE = date(2025, 11, 14)  # set to 6 Nov 2025; change to 7 if needed
 
 # ========================== DB Utils ==========================
 def get_engine() -> Engine:
@@ -690,4 +690,5 @@ if __name__ == "__main__":
     except Exception as unexpected_error:
         print(f" Unexpected error in main execution: {unexpected_error}")
         raise SystemExit(1)
+
 
