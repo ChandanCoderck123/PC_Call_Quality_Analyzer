@@ -3,14 +3,6 @@ realtime_specific_pc_script3_ingest.py
 --------------------
 PC CALL ANALYZER - AUDIO INGESTION AND TRANSCRIPTION MODULE (Realtime-ready)
 
-What's new (this edited copy):
-- After fetching a recording candidate from S3, verify it exists in the
-  appointment_recording table with recording_type = 'TO Closure' before
-  transcribing/upserting into public.pc_recordings.
-- Verification attempts exact URL with region, exact URL without region,
-  and a fallback suffix match (recording_link LIKE '%<key>') to be robust.
-- All original logic preserved; added comments on nearly every operation.
-
 Usage:
   # 1) Init DB
   python realtime_specific_pc_script3_ingest.py init_db
@@ -820,7 +812,3 @@ if __name__ == "__main__":
     except Exception as unexpected_error:
         print(f" Unexpected error in main execution: {unexpected_error}")
         raise SystemExit(1)
-
-
-
-
