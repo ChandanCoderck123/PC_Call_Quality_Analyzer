@@ -1,6 +1,4 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-# PC CALL ANALYZER - PENDING MATCHER (STORE BUCKET LABELS ONLY) - FULLY COMMENTED
+# PC CALL ANALYZER - PENDING MATCHER (STORE BUCKET LABELS ONLY)
 # This file matches a chosen canonical script from pc_ref_table (default PC_Script002)
 # against pending rows in pc_recordings, produces structured JSON feedback (one GPT call),
 # optionally derives a numeric bucket label from the feedback, stores only that label,
