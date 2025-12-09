@@ -60,7 +60,7 @@ except ImportError:
 DATABASE_URL = os.getenv(
     "DATABASE_URL",
     # fallback value if not set in env (you probably override in production)
-    "postgresql+psycopg2://qispineadmin:TrOpSnl1H1QdKAFsAWnY@qispine-db.cqjl02ffrczp.ap-south-1.rds.amazonaws.com:5432/qed_prod"
+    ""
 )
 
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "")  # openai api key from env
@@ -812,3 +812,4 @@ if __name__ == "__main__":
     except Exception as unexpected_error:
         print(f" Unexpected error in main execution: {unexpected_error}")
         raise SystemExit(1)
+
