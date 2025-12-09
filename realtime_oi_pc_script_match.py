@@ -52,7 +52,7 @@ except ImportError:
 # ==================== Global configuration =======================
 DATABASE_URL = os.getenv(                         # read DB connection string from environment
     "DATABASE_URL",
-    "postgresql+psycopg2://qispineadmin:TrOpSnl1H1QdKAFsAWnY@qispine-db.cqjl02ffrczp.ap-south-1.rds.amazonaws.com:5432/qed_prod"
+    ""
 )                                                # fallback DSN (keep secrets out of code in prod)
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "")  # read OpenAI API key from env (required for GPT calls)
 GPT_MODEL = os.getenv("GPT_MODEL", "gpt-4o")      # default model, can be overridden by CLI or env
@@ -906,3 +906,4 @@ if __name__ == "__main__":
     except Exception as e:
         print(f" FATAL: {e}")                           # fatal error log
         raise SystemExit(1)                             # exit non-zero for failure
+
