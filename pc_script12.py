@@ -38,7 +38,7 @@ except ImportError:
 # Configuration: DATABASE_URL with fallback, OPENAI_API_KEY, GPT_MODEL
 DATABASE_URL = os.getenv(
     "DATABASE_URL",
-    "postgresql+psycopg2://qispineadmin:TrOpSnl1H1QdKAFsAWnY@qispine-db.cqjl02ffrczp.ap-south-1.rds.amazonaws.com:5432/qed_prod"
+    ""
 )  # DB connection string; override with env var in production
 
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "")  # OpenAI API key required for GPT calls
@@ -515,3 +515,4 @@ def main():
 
 if __name__ == "__main__":  # run main when executed as script
     main()
+
